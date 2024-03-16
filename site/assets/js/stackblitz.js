@@ -13,9 +13,10 @@
 
 import sdk from '@stackblitz/sdk'
 // https://gohugo.io/hugo-pipes/js/#options
-import {
-  cssCdn, docsVersion, jsBundleCdn, jsSnippetFile
-} from '@params' // eslint-disable-line import/no-unresolved
+/* eslint-disable-next-line import/no-unresolved */
+import { cssCdn, docsVersion, jsBundleCdn } from '@params'
+/* eslint-disable-next-line import/no-absolute-path, import/no-unresolved */
+import { snippets } from '/js/partials/snippets.js'
 
 // Open in StackBlitz logic
 document.querySelectorAll('.btn-edit').forEach(btn => {
@@ -52,7 +53,7 @@ ${htmlSnippet.trimStart().replace(/^/gm, '    ').replace(/^ {4}$/gm, '').trimEnd
 </html>
 `
 
-  const jsSnippetContent = jsSnippet ? jsSnippetFile : null
+  const jsSnippetContent = jsSnippet ? `${snippets}\nsnippets()` : null
   const project = {
     files: {
       'index.html': markup,

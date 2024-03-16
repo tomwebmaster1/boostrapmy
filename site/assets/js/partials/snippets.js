@@ -13,7 +13,7 @@
 
 /* global bootstrap: false */
 
-export default () => {
+export function snippets() {
   // --------
   // Tooltips
   // --------

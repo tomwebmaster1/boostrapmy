@@ -12,7 +12,7 @@
 /* eslint-disable import/no-absolute-path, import/no-unresolved */
 import sidebarScroll from '/js/partials/sidebar.js'
 import codeExamples from '/js/partials/code-examples.js'
-import snippets from '/js/partials/snippets.js'
+import { snippets } from '/js/partials/snippets.js'
 /* eslint-enable import/no-absolute-path, import/no-unresolved */
 
 sidebarScroll()
