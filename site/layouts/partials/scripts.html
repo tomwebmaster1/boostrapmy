@@ -30,7 +30,7 @@
   "cssCdn" .Site.Params.cdn.css
   "jsBundleCdn" .Site.Params.cdn.js_bundle
   "docsVersion" .Site.Params.docs_version
-  "jsSnippetFile" (os.ReadFile "site/assets/js/snippets.js")
+  "jsSnippetFile" (os.ReadFile "/site/assets/js/partials/snippets.js")
 -}}
 {{- $esbuildOptions = merge $esbuildOptions (dict "params" $esbuildParams) -}}
 {{- $stackblitzJs := resources.Get "js/stackblitz.js" | js.Build $esbuildOptions | resources.Copy (path.Join $targetDocsJSPath "/assets/js/stackblitz.js") }}
